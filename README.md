@@ -17,7 +17,7 @@ php_server.start()
 php_server.stop()
 ```
 
-## `php.server`
+## php.server
 The `php.server` package provides the `PHPServer` object.
 ```  
 PHPServer(dir, server_address, install_loc="php")
@@ -35,7 +35,7 @@ is_running()  # Returns true if the server is running.
 ```
 
 
-## `php.finder`
+## php.finder
 The `php.finder` provides methods of searching for the PHP server executable. This is helpful if you're unsure whether the system has the PHP call in its #PATH environment variable.
 
 It provides the following functions
