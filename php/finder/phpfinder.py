@@ -1,7 +1,4 @@
-""" This module provides the functions to dynamically locate the PHP server executable on the current system. If it
-    cannot be found, it will prompt the user for the location and save it. If this file ever gets moved, it'll prompt
-    the user once again.
-"""
+""" This module provides the functions to dynamically locate the PHP server executable on the current system """
 import subprocess
 import platform
 import os.path
