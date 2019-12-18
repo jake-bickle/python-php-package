@@ -14,13 +14,17 @@ windows_defaults = [r"c:\php\php.exe",
                     r"c:\xampp\php\php.exe"]
 
 
-def get_php_path():
+def get_php_path(allow_prompt=True):
+    """ Returns the path to the php server executable.
+        If unable to automatically locate the PHP server executable and allow_prompt is true, it will prompt the user
+        through the console to state where their PHP server executable resides. This location will be cached and reused.
+    """
     path = check_saved_path()
     if not path:
         path = check_path_environment_variable()
     if not path:
         path = check_default_path()
-    if not path:
+    if not path and allow_prompt:
         path = prompt_for_php_path()
     return path
 
