@@ -40,8 +40,9 @@ def is_php_launcher(file_loc):
 
 
 def prompt_for_php_path():
+    """Prompts user to enter the PHP server location and caches the value. """
     path = None
-    print("Arachnid was unable to automatically locate the PHP server on the system.")
+    print("Unable to find PHP executable.")
     while not path:
         path = input("Please enter the location of the PHP launcher on your system: ").strip()
         path = os.path.abspath(path)
@@ -50,8 +51,8 @@ def prompt_for_php_path():
             if not path:
                 print("\nThe PHP server was not found at that location.")
         except PermissionError:
+            print(f"\nThe application does not have executable permission at {path}")
             path = None
-            print("\nArachnid does not have executable access to that location.")
     save_path(path)
     return path
 
