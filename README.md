@@ -29,7 +29,7 @@ PHPServer(dir, server_address, install_loc="php")
 The important methods it provides are the following
 ```
 start()       # Start the server on a new thread
-stop()        # Stop the server safely
+stop()        # Stop the server safely. It is strongly encouraged to always stop() the server after start()'ing it, else you run the risk of the server outliving the python code that started it.
 kill()        # Stop the server unsafely. Unrecommended.
 is_running()  # Returns true if the server is running.
 ```
