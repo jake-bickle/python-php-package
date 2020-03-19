@@ -1,6 +1,6 @@
 # Python-PHP-Package
 
-This is a simple Python package that allows the client to interface with the system's PHP command without having to making lower level BASH commands or creating threads.
+This is a simple Python package that allows the client to interface with the system's PHP command without having to make lower level BASH commands or creating threads. This was a work in progress. Feel free to create a pull request to add more compataibility across operating systems.
 
 It's important to keep in mind that this package *does not create* a PHP server. It only interfaces with the PHP that (hopefully) exists on the system.
 
